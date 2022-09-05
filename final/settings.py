@@ -24,12 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-c3yasyq)&i2n3rl^v*l94zi_#k)#@a+8hv5akn^zfvwtoc-xr2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ENV = os.environ.get("DJANGO_ENV", "dev")
+DEBUG = True
 
-if ENV == "dev":
-    DEBUG = True
-else:
-    DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -47,11 +43,6 @@ INSTALLED_APPS = [
     "user",
 ]
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
-
-LOGIN_URL = "/login"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
